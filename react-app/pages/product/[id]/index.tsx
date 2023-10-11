@@ -27,7 +27,7 @@ export default function ProductDetail({ flashDeal }: { flashDeal: any }) {
           {flashDeal.data.attributes.description}
         </span>
         <p className="mb-2 font-normal text-gray-700 dark:text-gray-400">
-          {flashDeal.data.attributes.price}
+          RS: {flashDeal.data.attributes.price}
         </p>
         <p className="mb-2 font-normal text-gray-700 dark:text-gray-400">
           {flashDeal.data.attributes.offerRate}
