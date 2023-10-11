@@ -23,7 +23,7 @@ export default function ProductDetail({ flashDeal }: { flashDeal: any }) {
           }
           alt=""
         />
-        <span className="mb-2 mt-6 line-clamp-2 tracking-tight text-gray-900 dark:text-white">
+        <span className="mb-2 mt-6 tracking-tight text-gray-900 dark:text-white">
           {flashDeal.data.attributes.description}
         </span>
         <p className="mb-2 font-normal text-gray-700 dark:text-gray-400">
