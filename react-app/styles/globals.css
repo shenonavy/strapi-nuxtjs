@@ -16,6 +16,14 @@
   }
 }
 
-p, h3 {
+p,
+h3 {
   color: black;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }

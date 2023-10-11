@@ -712,6 +712,40 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiHardwareFlashDealHardwareFlashDeal
+  extends Schema.CollectionType {
+  collectionName: 'hardware_flash_deals';
+  info: {
+    singularName: 'hardware-flash-deal';
+    pluralName: 'hardware-flash-deals';
+    displayName: 'Hardware Flash Deal';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description: Attribute.String;
+    price: Attribute.Decimal;
+    offerRate: Attribute.String;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hardware-flash-deal.hardware-flash-deal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hardware-flash-deal.hardware-flash-deal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiMovieMovie extends Schema.CollectionType {
   collectionName: 'movies';
   info: {
@@ -795,6 +829,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::category.category': ApiCategoryCategory;
+      'api::hardware-flash-deal.hardware-flash-deal': ApiHardwareFlashDealHardwareFlashDeal;
       'api::movie.movie': ApiMovieMovie;
       'api::restaurant.restaurant': ApiRestaurantRestaurant;
     }
