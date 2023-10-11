@@ -12,7 +12,6 @@ export async function getServerSideProps(context: any) {
 }
 
 export default function ProductDetail({ flashDeal }: { flashDeal: any }) {
-
   return (
     <div className="p-6">
       <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer">
